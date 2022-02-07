@@ -10,6 +10,7 @@ import UIKit
 
 class KakaoChatLandingViewController: UIViewController {
     // TODO: TableView를 만들어서 outlet으로 추가해주세요.
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +30,16 @@ extension KakaoChatLandingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //TODO: list의 갯수만큼 나오게 해주세요.
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // TODO: KakaoChatTableViewCell을 생성해주세요. 생성하고 configure을 불러주세요.
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? KakaoChatTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        
+        return cell
     }
 }

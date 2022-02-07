@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="94" id="pm3-Ed-LhO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="94" id="pm3-Ed-LhO">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pm3-Ed-LhO" id="02o-bq-H6N">
@@ -35,32 +35,37 @@
                                                         <constraint firstAttribute="width" constant="64" id="zOE-f9-7xh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="배선희" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2c-ru-i7t">
-                                                    <rect key="frame" x="103" y="15" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배선희" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2c-ru-i7t">
+                                                    <rect key="frame" x="103" y="15" width="47" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="잘 지내삼?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxm-ev-qDJ">
-                                                    <rect key="frame" x="103" y="44" width="279" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="잘 지내삼?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxm-ev-qDJ">
+                                                    <rect key="frame" x="103" y="44" width="223" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="오후 12:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgr-ZB-8Zv">
-                                                    <rect key="frame" x="317" y="15" width="77" height="21"/>
+                                                    <rect key="frame" x="333" y="17" width="67" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="iWY-xj-KBA" firstAttribute="leading" secondItem="02o-bq-H6N" secondAttribute="leading" constant="20" symbolic="YES" id="1AC-nn-Gxu"/>
+                                                <constraint firstItem="hxm-ev-qDJ" firstAttribute="leading" secondItem="iWY-xj-KBA" secondAttribute="trailing" constant="19" id="FFX-rq-3cz"/>
+                                                <constraint firstAttribute="bottom" secondItem="hxm-ev-qDJ" secondAttribute="bottom" id="JZm-9p-fui"/>
+                                                <constraint firstItem="hxm-ev-qDJ" firstAttribute="top" secondItem="02o-bq-H6N" secondAttribute="top" constant="44" id="Low-Ku-uol"/>
+                                                <constraint firstAttribute="trailing" secondItem="hxm-ev-qDJ" secondAttribute="trailing" constant="88" id="MIJ-0W-w2K"/>
+                                                <constraint firstItem="J2c-ru-i7t" firstAttribute="top" secondItem="02o-bq-H6N" secondAttribute="top" constant="15" id="RsS-70-ybh"/>
                                                 <constraint firstItem="iWY-xj-KBA" firstAttribute="top" secondItem="02o-bq-H6N" secondAttribute="top" constant="15" id="WRH-le-j0j"/>
+                                                <constraint firstAttribute="trailing" secondItem="J2c-ru-i7t" secondAttribute="trailing" constant="264" id="cI8-xV-rs4"/>
                                                 <constraint firstAttribute="bottom" secondItem="iWY-xj-KBA" secondAttribute="bottom" constant="15" id="lno-lS-ers"/>
+                                                <constraint firstItem="J2c-ru-i7t" firstAttribute="leading" secondItem="iWY-xj-KBA" secondAttribute="trailing" constant="19" id="q6L-eq-z8P"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
